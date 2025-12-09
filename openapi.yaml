@@ -1,0 +1,76 @@
+openapi: 3.0.4
+info:
+  title: URL Unshortener
+  description: URL Unshortener is a simple tool for unshortening shortened URLs. It returns the original URL before it was shortened.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/urlunshortener:
+    post:
+      summary: Unshorten Shortened URL
+      description: URL Unshortener is a simple tool for unshortening shortened URLs. It returns the original URL before it was shortened.
+      operationId: urlunshortener
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  source: https://bit.ly/3k3j4
+                  destination: http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
+                  unshortened: true
+                  reason: 
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: The shortened URL to unshorten
+                  example: https://bit.ly/3k3j4
+              required:
+              - url
+              example:
+                url: https://bit.ly/3k3j4
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
