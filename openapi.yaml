@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: URL Unshortener
-  description: URL Unshortener is a simple tool for unshortening shortened URLs. It returns the original URL before it was shortened.
+  description: >-
+    URL Unshortener is a simple tool for unshortening shortened URLs. It returns
+    the original URL before it was shortened.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/urlunshortener:
     post:
       summary: Unshorten Shortened URL
-      description: URL Unshortener is a simple tool for unshortening shortened URLs. It returns the original URL before it was shortened.
+      description: Unshorten a shortened URL
       operationId: urlunshortener
       parameters: []
       responses:
@@ -35,22 +37,23 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   source: https://bit.ly/3k3j4
-                  destination: http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
+                  destination: >-
+                    http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
                   unshortened: true
-                  reason: 
+                  reason: null
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -61,11 +64,8 @@ paths:
                 url:
                   type: string
                   description: The shortened URL to unshorten
-                  example: https://bit.ly/3k3j4
               required:
-              - url
-              example:
-                url: https://bit.ly/3k3j4
+                - url
 components:
   securitySchemes:
     api_key:
@@ -73,4 +73,6 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  url: https://bit.ly/3k3j4
