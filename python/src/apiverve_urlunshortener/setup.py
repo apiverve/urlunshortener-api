@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_urlunshortener',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='URL Unshortener is a simple tool for unshortening shortened URLs. It returns the original URL before it was shortened.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/urlunshortener',
-        'Source': 'https://github.com/apiverve/urlunshortener-api',
-        'Bug Tracker': 'https://github.com/apiverve/urlunshortener-api/issues'
-    },
+    url='https://apiverve.com/marketplace/urlunshortener?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
