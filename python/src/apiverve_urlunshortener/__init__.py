@@ -1,1 +1,3 @@
-from .apiClient import UrlunshortenerAPIClient
+from .apiClient import UrlunshortenerAPIClient, UrlunshortenerAPIClientError
+
+__all__ = ['UrlunshortenerAPIClient', 'UrlunshortenerAPIClientError']
