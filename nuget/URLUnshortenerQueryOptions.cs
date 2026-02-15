@@ -12,7 +12,6 @@ namespace APIVerve.API.URLUnshortener
     {
         /// <summary>
         /// The shortened URL to unshorten
-        /// Example: https://bit.ly/3k3j4
         /// </summary>
         [JsonProperty("url")]
         public string Url { get; set; }
