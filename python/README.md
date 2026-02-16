@@ -219,8 +219,9 @@ from apiverve_urlunshortener.apiClient import UrlunshortenerAPIClient
 
 api = UrlunshortenerAPIClient("[YOUR_API_KEY]")
 
+query = { "url": "https://bit.ly/3k3j4" }
+
 try:
-    query = { "url": "https://bit.ly/3k3j4" }
     result = api.execute(query)
     print(result)
 finally:
