@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/urlunshortener",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "URL Unshortener is a simple tool for unshortening shortened URLs. It returns the original URL before it was shortened.",
   "main": "index.js",
   "types": "index.d.ts",
