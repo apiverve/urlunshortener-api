@@ -125,7 +125,13 @@ async function makeRequest() {
     "source": "https://bit.ly/3k3j4",
     "destination": "http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/",
     "unshortened": true,
-    "reason": null
+    "reason": null,
+    "redirectCount": 1,
+    "destinationDomain": "www.allclimbing.com",
+    "redirectChain": [
+      "https://bit.ly/3k3j4",
+      "http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/"
+    ]
   }
 }
 ```
