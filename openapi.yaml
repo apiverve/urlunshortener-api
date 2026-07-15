@@ -48,6 +48,12 @@ paths:
                     http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
                   unshortened: true
                   reason: null
+                  redirectCount: 1
+                  destinationDomain: www.allclimbing.com
+                  redirectChain:
+                    - https://bit.ly/3k3j4
+                    - >-
+                      http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
