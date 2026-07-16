@@ -25,6 +25,9 @@ namespace APIVerve.API.URLUnshortener
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -36,9 +39,30 @@ namespace APIVerve.API.URLUnshortener
         public Uri Destination { get; set; }
 
         [JsonProperty("unshortened")]
-        public bool Unshortened { get; set; }
+        public bool? Unshortened { get; set; }
 
         [JsonProperty("reason")]
         public object Reason { get; set; }
+
+        [JsonProperty("redirectCount")]
+        public long? RedirectCount { get; set; }
+
+        [JsonProperty("destinationDomain")]
+        public string DestinationDomain { get; set; }
+
+        [JsonProperty("redirectChain")]
+        public Uri[] RedirectChain { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
