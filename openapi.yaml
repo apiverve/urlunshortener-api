@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: URL Unshortener
   description: >-
-    URL Unshortener is a simple tool for unshortening shortened URLs. It returns
-    the original URL before it was shortened.
+    URL Unshortener expands shortened links to reveal their final destination
+    URL and destination domain. Send any short link to inspect the resolved
+    address and redirect count; paid plans add the full redirect chain.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/urlunshortener:
     post:
-      summary: Unshorten Shortened URL
+      summary: URL Unshortener
       description: Unshorten a shortened URL
       operationId: urlunshortener
       parameters: []
@@ -44,16 +45,13 @@ paths:
                 error: null
                 data:
                   source: https://bit.ly/3k3j4
-                  destination: >-
-                    http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
+                  destination: http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
                   unshortened: true
-                  reason: null
                   redirectCount: 1
                   destinationDomain: www.allclimbing.com
                   redirectChain:
                     - https://bit.ly/3k3j4
-                    - >-
-                      http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
+                    - http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
