@@ -1,13 +1,12 @@
 URL Unshortener API
 ============
 
-URL Unshortener is a simple tool for unshortening shortened URLs. It returns the original URL before it was shortened.
+URL Unshortener expands shortened links to reveal their final destination URL and destination domain. Send any short link to inspect the resolved address and redirect count; paid plans add the full redirect chain.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [URL Unshortener API](https://apiverve.com/marketplace/urlunshortener?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-urlunshortener.svg)](https://pypi.org/project/apiverve-urlunshortener/)
+
+This is a Python wrapper for the [URL Unshortener API](https://apiverve.com/marketplace/urlunshortener?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-urlunshortener
 
 ## Configuration
 
-Before using the urlunshortener API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the URL Unshortener API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The URL Unshortener API documentation is found here: [https://docs.apiverve.com/ref/urlunshortener](https://docs.apiverve.com/ref/urlunshortener?utm_source=pypi&utm_medium=readme).
+The URL Unshortener API documentation is found here: [https://docs.apiverve.com/ref/urlunshortener](https://docs.apiverve.com/ref/urlunshortener?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -105,7 +104,12 @@ print(result)
     "source": "https://bit.ly/3k3j4",
     "destination": "http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/",
     "unshortened": true,
-    "reason": null
+    "redirectCount": 1,
+    "destinationDomain": "www.allclimbing.com",
+    "redirectChain": [
+      "https://bit.ly/3k3j4",
+      "http://www.allclimbing.com/archive/2009/09/climbing-video-alex-puccio-on-trice-v12/"
+    ]
   }
 }
 ```
@@ -233,7 +237,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -244,12 +248,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
