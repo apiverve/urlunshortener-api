@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/urlunshortener",
-  "version": "1.2.0",
-  "description": "URL Unshortener is a simple tool for unshortening shortened URLs. It returns the original URL before it was shortened.",
+  "version": "1.2.2",
+  "description": "URL Unshortener expands shortened links to reveal their final destination URL and destination domain. Send any short link to inspect the resolved address and redirect count; paid plans add the full redirect chain.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "url unshortener", "url unshortener api", "url unshortener tool", "url unshortener software", "url unshortener service"
+    "url unshortener api", "unshorten url", "expand shortened link", "url redirect tracker", "follow redirects"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/urlunshortener-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/urlunshortener?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/urlunshortener?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

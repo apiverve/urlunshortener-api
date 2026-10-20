@@ -28,7 +28,6 @@ declare module '@apiverve/urlunshortener' {
       source:            null | string;
       destination:       null | string;
       unshortened:       boolean | null;
-      reason:            null;
       redirectCount:     number | null;
       destinationDomain: null | string;
       redirectChain:     (null | string)[];
