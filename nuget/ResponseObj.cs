@@ -41,9 +41,6 @@ namespace APIVerve.API.URLUnshortener
         [JsonProperty("unshortened")]
         public bool? Unshortened { get; set; }
 
-        [JsonProperty("reason")]
-        public object Reason { get; set; }
-
         [JsonProperty("redirectCount")]
         public long? RedirectCount { get; set; }
 
