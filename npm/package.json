@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/urlunshortener",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "URL Unshortener expands shortened links to reveal their final destination URL and destination domain. Send any short link to inspect the resolved address and redirect count; paid plans add the full redirect chain.",
   "main": "index.js",
   "types": "index.d.ts",
